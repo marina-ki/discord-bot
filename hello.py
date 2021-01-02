@@ -13,7 +13,7 @@ async def on_ready():
 async def on_message(message):
 
     if message.author != client.user:
-        if message.content == "/hello":
+        if message.content == "/hi":
             msg = message.author.mention + "Fuck!"
         await client.send_message(message.channel, msg)
 
