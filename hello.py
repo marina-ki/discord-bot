@@ -2,7 +2,7 @@ import discord
 import asyncio
 import os
 
-TOKEN = os.getenv('TOKEN',)
+TOKEN = os.getenv('TOKEN')
 client = discord.Client()
 
 @client.event
@@ -18,7 +18,7 @@ async def on_message(message):
     if message.author != client.user:
         if message.content == "/hi":
             msg = message.author.mention + "Fuck!"
-        await client.send_message(message.channel, msg)
+        await message.channel.send(msg)
 
 
 client.run(TOKEN)
