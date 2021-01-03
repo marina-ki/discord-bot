@@ -17,7 +17,7 @@ async def on_message(message):
 
     if message.author != client.user:
         if message.content == "/hi":
-            emoji = '\N{Middle Finger}'
+            emoji = '\N{Reversed Hand with Middle Finger Extended}'
             msg = message.author.mention + " Fuck!"
         await message.add_reaction(emoji)
         await message.channel.send(msg)
