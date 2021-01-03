@@ -17,7 +17,8 @@ async def on_message(message):
 
     if message.author != client.user:
         if message.content == "/hi":
-            msg = message.author.mention + "Fuck!"
+            message.add_reaction("🖕")
+            msg = message.author.mention + " Fuck!"
         await message.channel.send(msg)
 
 
