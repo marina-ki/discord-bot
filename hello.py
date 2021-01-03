@@ -17,9 +17,10 @@ async def on_message(message):
 
     if message.author != client.user:
         if message.content == "/hi":
-            message.add_reaction("🖕")
+            emoji = '\N{Middle Finger}'
+            await message.add_reaction(emoji)
             msg = message.author.mention + " Fuck!"
-        await message.channel.send(msg)
+            await message.channel.send(msg)
 
 
 client.run(TOKEN)
